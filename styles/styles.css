@@ -25,9 +25,22 @@
   font-display: swap;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 
 body {
 
+  margin: 0;
+  min-width: 600px;
   font-family: "Poppins", sans-serif;
   font-size: 20px;
   line-height: normal;
@@ -35,15 +48,61 @@ body {
   background-color: #ffffff;
 }
 
+.page-container {
+
+  width: 600px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.20);
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+
+.page-header {
+
+  padding: 19px 0 18px;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.header-logo-image {
+  display: block;
+  margin: 0 auto;
+}
+
 .page-title{
   font-size: 30px;
   font-weight: 400;
   line-height: 36px;
   color: #1c1e23;
+  margin: 0;
+  margin-top: 18px;
+
+}
+
+
+
+.plugins-card-list{
+
+  list-style-type: none;
+  margin: 0;
+  padding: 44px 8px;
+  display: grid;
+  grid-template-columns: 260px 260px;
+  gap: 72px 16px;
+  border-bottom: 1px solid #f3f3f3;
 }
 
 .plugins-card-link{
   text-decoration: none;
+  margin-bottom: 1px;
+  display: block;
+}
+
+.plugins-card-image {
+  display: block;
+  border-radius: 7px;
+  box-shadow: 3px 4px 44px 0px rgba(0, 0, 0, 0.03);
+  margin-bottom: 8px;
 }
 
 .plugins-card-title {
@@ -53,14 +112,17 @@ body {
   line-height: normal;
   letter-spacing: -0.2px;
   color: #333333;
+  margin: 0;
 }
 
 .plugins-card-price {
 
+  display: block;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   color: #489DFF;
+  margin-bottom: 18px;
 }
 
 .plugins-card-button {
@@ -72,13 +134,23 @@ body {
   font-weight: 700;
   color: #ffffff;
 
+  display: block;
+  width: 131px;
+  box-sizing: border-box;
+  padding: 16px 50px;
+  border-radius: 7px;
+  background-color: #489dff;
+  text-decoration: none;
 }
 
 
 /* -------------footer--------------*/
 
 
-
+.page-footer{
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
 
 .footer-title, .footer-description{
 
@@ -87,8 +159,48 @@ body {
   font-size: 12px;
   font-weight: 400;
   line-height: 20px;
+  margin: 0;
+  margin-bottom: 15px;
 }
 
 .footer-email {
   color: #489dff;
+  text-decoration: none;
+}
+
+.footer-social-list{
+
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+
+
+.footer-social-item:first-child {
+  margin-right: 8px;
+}
+
+.footer-social-link{
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: relative;
+}
+
+.footer-social-icon {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
